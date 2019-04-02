@@ -83,7 +83,9 @@ bstick.def <- function (n, tot.var = 1, ...)   # 'bstick.default' from vegan
 		eig <- D.eig$values
 		rel.eig <- eig/trace
 		rel.eig.cor <- (eig - min.eig)/(trace - (n-1)*min.eig) # Eq. 9.27 for a single dimension
-		rel.eig.cor = c(rel.eig.cor[1:(zero.eig[1]-1)], rel.eig.cor[(zero.eig[1]+1):n], 0)
+		if (length(zero.eig) > 0) {
+		  rel.eig.cor <- c(rel.eig.cor[-zero.eig[1]], 0)
+		}
 		cum.eig.cor <- cumsum(rel.eig.cor) 
 		k2 <- length(which(eig > epsilon))
 		k3 <- length(which(rel.eig.cor > epsilon))
