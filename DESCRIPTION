@@ -33,7 +33,7 @@ Authors@R: c(person("Emmanuel", "Paradis", role = c("aut", "cre", "cph"), email 
   person("Korbinian", "Strimmer", role = c("aut", "cph")),
   person("Damien", "de Vienne", role = c("aut", "cph")))
 Depends: R (>= 3.2.0)
-Suggests: gee, expm, igraph
+Suggests: gee, expm, igraph, testthat
 Imports: nlme, lattice, graphics, methods, stats, tools, utils,
         parallel, Rcpp (>= 0.12.0)
 LinkingTo: Rcpp
