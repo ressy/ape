@@ -10,4 +10,8 @@ The project's official homepage is <http://ape-package.ird.fr>.
 Relative to the latest official release, this version:
 
  * Fixes a crash in `pcoa` for distance matrices yielding negative eigenvalues
-   but no zeros
+   but no zeros ([#2])
+ * Adds a little unit testing via [testthat](https://testthat.r-lib.org/)
+
+
+[#2]: https://github.com/ressy/ape/pull/2
